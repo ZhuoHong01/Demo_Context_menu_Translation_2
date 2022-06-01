@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onContextItemSelected(MenuItem item) {
         // Handle action bar item clicks here.
         int id = item.getItemId();
 
@@ -50,6 +50,6 @@ public class MainActivity extends AppCompatActivity {
             tvTranslatedText.setText("Error translation");
         }
 
-        return super.onOptionsItemSelected(item);
+        return super.onContextItemSelected(item);
     }
 }
