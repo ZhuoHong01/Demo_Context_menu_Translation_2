@@ -3,8 +3,10 @@ package sg.edu.rp.c346.id21018193.democontextmenutranslation2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,9 +28,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+
     }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v,
+                                    ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
